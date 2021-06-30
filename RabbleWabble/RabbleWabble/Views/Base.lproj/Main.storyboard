@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="RabbleWabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuestionView" customModule="RabbleWabble" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prompt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-QB-kCC">
+                                <rect key="frame" x="0.0" y="104" width="375" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP5-Uc-dL4">
+                                <rect key="frame" x="0.0" y="172" width="375" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuh-XV-vaQ">
+                                <rect key="frame" x="0.0" y="250.66666666666666" width="375" height="57.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHc-n9-ZpO">
+                                <rect key="frame" x="32" y="627" width="80" height="80"/>
+                                <state key="normal" image="ic_circle_x"/>
+                                <connections>
+                                    <action selector="handleIncorrect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ut-Cy-Lev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-Mf-WUJ">
+                                <rect key="frame" x="263" y="627" width="80" height="80"/>
+                                <state key="normal" image="ic_circle_check"/>
+                                <connections>
+                                    <action selector="handleCorrect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8O-CQ-hEP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdL-7W-oyu">
+                                <rect key="frame" x="293" y="715" width="20" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.59905660149999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTu-es-m7e">
+                                <rect key="frame" x="62" y="715" width="20" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="0.1357602477" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xuh-XV-vaQ" firstAttribute="top" secondItem="tP5-Uc-dL4" secondAttribute="bottom" constant="50" id="98n-dS-l4G"/>
+                            <constraint firstItem="xuh-XV-vaQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DRd-IT-lHv"/>
+                            <constraint firstItem="R3M-QB-kCC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="KxT-6A-FqX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xuh-XV-vaQ" secondAttribute="trailing" id="NnD-sK-ueT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CdL-7W-oyu" secondAttribute="bottom" constant="24" id="O9a-J5-GvB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LTu-es-m7e" secondAttribute="bottom" constant="24" id="Ol2-qI-Nc9"/>
+                            <constraint firstItem="CdL-7W-oyu" firstAttribute="top" secondItem="fXa-Mf-WUJ" secondAttribute="bottom" constant="8" id="PH6-Xu-mU7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R3M-QB-kCC" secondAttribute="trailing" id="QIg-ni-PUQ"/>
+                            <constraint firstItem="tP5-Uc-dL4" firstAttribute="top" secondItem="R3M-QB-kCC" secondAttribute="bottom" constant="8" id="Qml-r4-Ou0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fXa-Mf-WUJ" secondAttribute="trailing" constant="32" id="bn4-xL-XHR"/>
+                            <constraint firstItem="R3M-QB-kCC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c0W-T9-ldA"/>
+                            <constraint firstItem="CdL-7W-oyu" firstAttribute="centerX" secondItem="fXa-Mf-WUJ" secondAttribute="centerX" id="dUh-kX-8XU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tP5-Uc-dL4" secondAttribute="trailing" id="mTl-UY-uXZ"/>
+                            <constraint firstItem="PHc-n9-ZpO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="pcl-Mc-WUe"/>
+                            <constraint firstItem="tP5-Uc-dL4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tOm-w4-Sl6"/>
+                            <constraint firstItem="LTu-es-m7e" firstAttribute="centerX" secondItem="PHc-n9-ZpO" secondAttribute="centerX" id="vgI-WV-8UG"/>
+                            <constraint firstItem="LTu-es-m7e" firstAttribute="top" secondItem="PHc-n9-ZpO" secondAttribute="bottom" constant="8" id="yFr-dc-hyf"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="answerLabel" destination="xuh-XV-vaQ" id="Mqp-9v-hBM"/>
+                            <outlet property="correctCountLabel" destination="CdL-7W-oyu" id="KTT-kd-35Q"/>
+                            <outlet property="hintLabel" destination="tP5-Uc-dL4" id="E5i-68-AQI"/>
+                            <outlet property="incorrectCountLabel" destination="LTu-es-m7e" id="Ojc-Ed-v8k"/>
+                            <outlet property="promptLabel" destination="R3M-QB-kCC" id="KKd-dz-mln"/>
+                            <outletCollection property="gestureRecognizers" destination="d0h-XZ-ENB" appends="YES" id="zen-10-nRP"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d0h-XZ-ENB">
+                    <connections>
+                        <action selector="toggleAnswerLabels:" destination="BYZ-38-t0r" id="if7-7s-Kil"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="139" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_circle_check" width="80" height="80"/>
+        <image name="ic_circle_x" width="80" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

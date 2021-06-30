@@ -53,6 +53,4 @@ public class RandomQuestionStrategy: QuestionStrategy {
     public func questionIndexTitle() -> String {
         "\(questionIndex + 1) / " + "\(questionGroup.questions.count)"
     }
-    
-    
 }

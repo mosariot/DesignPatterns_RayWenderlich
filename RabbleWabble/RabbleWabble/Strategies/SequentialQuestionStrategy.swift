@@ -8,7 +8,7 @@
 import Foundation
 
 // strategy
-public class SequentionalQuestionStrategy: QuestionStrategy {
+public class SequentialQuestionStrategy: QuestionStrategy {
     
     // MARK: - Properties
     

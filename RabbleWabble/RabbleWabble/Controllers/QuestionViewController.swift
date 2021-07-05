@@ -7,7 +7,7 @@
 
 import UIKit
 
-// dekegate protocol
+// delegate protocol
 public protocol QuestionViewControllerDelegate: AnyObject {
     
     func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionStrategy)

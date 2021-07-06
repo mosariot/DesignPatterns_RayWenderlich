@@ -55,9 +55,10 @@ extension SelectQuestionGroupViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionGroupCell") as! QuestionGroupCell
         let questionGroup = questionGroups[indexPath.row]
         cell.titleLabel.text = questionGroup.title
-        cell.percentageSubscriber = questionGroup.score.$runningPercetage
+        // subscriber
+        cell.percentageSubscriber = questionGroup.score.$runningPercetage // publisher
             .receive(on: DispatchQueue.main)
-            .map() { String(format: "%.0f %%", round(100 * $0))}
+            .map() { String(format: "%.0f %%", round(100 * $0)) }
             .assign(to: \.text, on: cell.percentageLabel)
         return cell
     }
@@ -77,9 +78,13 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
     }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? QuestionViewController else { return }
-        viewController.questionStrategy = appSettings.questionStrategy(for: questionGroupCaretaker)
-        viewController.delegate = self
+        if let viewController = segue.destination as? QuestionViewController {
+            viewController.questionStrategy = appSettings.questionStrategy(for: questionGroupCaretaker)
+            viewController.delegate = self
+        } else if let navController = segue.destination as? UINavigationController,
+                  let viewController = navController.topViewController as? CreateQuestionGroupViewController {
+            viewController.delegate = self
+        }
     }
 }
 
@@ -94,5 +99,22 @@ extension SelectQuestionGroupViewController: QuestionViewControllerDelegate {
     
     public func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionStrategy) {
         navigationController?.popToViewController(self, animated: true)
+    }
+}
+
+// MARK: - CreateQuestionGroupViewControllerDelegate
+
+extension SelectQuestionGroupViewController: CreateQuestionGroupViewControllerDelegate {
+    
+    public func createQuestionGroupViewControllerDidCancel(_ viewController: CreateQuestionGroupViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    public func createQuestionGroupViewController(_ viewController: CreateQuestionGroupViewController, created questionGroup: QuestionGroup) {
+        questionGroupCaretaker.questionGroups.append(questionGroup)
+        try? questionGroupCaretaker.save()
+        
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
 }

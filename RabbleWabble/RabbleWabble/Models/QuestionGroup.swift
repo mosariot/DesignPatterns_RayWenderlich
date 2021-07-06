@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 // originator
+// buld product
 public class QuestionGroup: Codable {
     
     public class Score: Codable {
@@ -18,7 +19,9 @@ public class QuestionGroup: Codable {
         public var incorrectCount: Int = 0 {
             didSet { updateRunningPercentage() }
         }
+        // published value
         @Published public var runningPercetage: Double = 0
+        
         public init() {}
         
         private enum CodingKeys: String, CodingKey {

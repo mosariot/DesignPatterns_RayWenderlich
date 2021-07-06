@@ -21,6 +21,12 @@
 		9F539594268C9540007166BE /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F539593268C9540007166BE /* QuestionStrategy.swift */; };
 		9F539596268C9673007166BE /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F539595268C9673007166BE /* SequentialQuestionStrategy.swift */; };
 		9F539598268C9CB9007166BE /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F539597268C9CB9007166BE /* RandomQuestionStrategy.swift */; };
+		9FB021472693896A00F5E71C /* CreateQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB021462693896A00F5E71C /* CreateQuestionGroupViewController.swift */; };
+		9FB0214C26938ABF00F5E71C /* CreateQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB0214826938ABF00F5E71C /* CreateQuestionCell.swift */; };
+		9FB0214D26938ABF00F5E71C /* NewQuestionGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB0214926938ABF00F5E71C /* NewQuestionGroup.storyboard */; };
+		9FB0214E26938ABF00F5E71C /* CreateQuestionGroupTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB0214A26938ABF00F5E71C /* CreateQuestionGroupTitleCell.swift */; };
+		9FB0214F26938ABF00F5E71C /* JapaneseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB0214B26938ABF00F5E71C /* JapaneseTextField.swift */; };
+		9FB02152269436ED00F5E71C /* QuestionGroupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB02151269436ED00F5E71C /* QuestionGroupBuilder.swift */; };
 		9FB90688268CE5C20040FEC4 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB90687268CE5C20040FEC4 /* AppSettings.swift */; };
 		9FB9068A268CEA030040FEC4 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB90689268CEA030040FEC4 /* AppSettingsViewController.swift */; };
 		9FB9068F268F33980040FEC4 /* DiskCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9068E268F33980040FEC4 /* DiskCaretaker.swift */; };
@@ -46,6 +52,12 @@
 		9F539593268C9540007166BE /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		9F539595268C9673007166BE /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
 		9F539597268C9CB9007166BE /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
+		9FB021462693896A00F5E71C /* CreateQuestionGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionGroupViewController.swift; sourceTree = "<group>"; };
+		9FB0214826938ABF00F5E71C /* CreateQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionCell.swift; sourceTree = "<group>"; };
+		9FB0214926938ABF00F5E71C /* NewQuestionGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewQuestionGroup.storyboard; sourceTree = "<group>"; };
+		9FB0214A26938ABF00F5E71C /* CreateQuestionGroupTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestionGroupTitleCell.swift; sourceTree = "<group>"; };
+		9FB0214B26938ABF00F5E71C /* JapaneseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JapaneseTextField.swift; sourceTree = "<group>"; };
+		9FB02151269436ED00F5E71C /* QuestionGroupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupBuilder.swift; sourceTree = "<group>"; };
 		9FB90687268CE5C20040FEC4 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		9FB90689268CEA030040FEC4 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		9FB9068E268F33980040FEC4 /* DiskCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCaretaker.swift; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				9F08B64C268B3997008F20B1 /* AppDelegate */,
+				9FB02150269436D000F5E71C /* Builders */,
 				9F08B64E268B39BC008F20B1 /* Models */,
 				9F08B64F268B39C2008F20B1 /* Views */,
 				9F08B64D268B39B5008F20B1 /* Controllers */,
@@ -108,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB90689268CEA030040FEC4 /* AppSettingsViewController.swift */,
+				9FB021462693896A00F5E71C /* CreateQuestionGroupViewController.swift */,
 				9F08B63C268B37C0008F20B1 /* QuestionViewController.swift */,
 				9F53958E268C6936007166BE /* SelectQuestionGroupViewController.swift */,
 			);
@@ -127,10 +141,14 @@
 		9F08B64F268B39C2008F20B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9FB0214826938ABF00F5E71C /* CreateQuestionCell.swift */,
+				9FB0214A26938ABF00F5E71C /* CreateQuestionGroupTitleCell.swift */,
+				9FB0214B26938ABF00F5E71C /* JapaneseTextField.swift */,
 				9F08B659268B3CF8008F20B1 /* LaunchScreen.storyboard */,
 				9F08B63E268B37C0008F20B1 /* Main.storyboard */,
-				9F08B65B268B3F65008F20B1 /* QuestionView.swift */,
+				9FB0214926938ABF00F5E71C /* NewQuestionGroup.storyboard */,
 				9F539590268C6AA4007166BE /* QuestionGroupCell.swift */,
+				9F08B65B268B3F65008F20B1 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,12 +166,20 @@
 		9F539592268C9510007166BE /* Strategies */ = {
 			isa = PBXGroup;
 			children = (
-				9F539593268C9540007166BE /* QuestionStrategy.swift */,
 				9FBD908D2692DC8D009A7E53 /* BaseQuestionStrategy.swift */,
+				9F539593268C9540007166BE /* QuestionStrategy.swift */,
 				9F539597268C9CB9007166BE /* RandomQuestionStrategy.swift */,
 				9F539595268C9673007166BE /* SequentialQuestionStrategy.swift */,
 			);
 			path = Strategies;
+			sourceTree = "<group>";
+		};
+		9FB02150269436D000F5E71C /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				9FB02151269436ED00F5E71C /* QuestionGroupBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		9FB9068D268F336F0040FEC4 /* CareTakers */ = {
@@ -222,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB0214D26938ABF00F5E71C /* NewQuestionGroup.storyboard in Resources */,
 				9F08B65A268B3CF9008F20B1 /* LaunchScreen.storyboard in Resources */,
 				9FB90693268F3CDC0040FEC4 /* QuestionGroupData.json in Resources */,
 				9F08B658268B3CD8008F20B1 /* Assets.xcassets in Resources */,
@@ -243,14 +270,19 @@
 				9F08B65C268B3F65008F20B1 /* QuestionView.swift in Sources */,
 				9F539591268C6AA4007166BE /* QuestionGroupCell.swift in Sources */,
 				9F539594268C9540007166BE /* QuestionStrategy.swift in Sources */,
+				9FB02152269436ED00F5E71C /* QuestionGroupBuilder.swift in Sources */,
+				9FB0214C26938ABF00F5E71C /* CreateQuestionCell.swift in Sources */,
 				9F539598268C9CB9007166BE /* RandomQuestionStrategy.swift in Sources */,
 				9FB9068F268F33980040FEC4 /* DiskCaretaker.swift in Sources */,
 				9F08B654268B3C57008F20B1 /* QuestionGroup.swift in Sources */,
 				9F53958F268C6936007166BE /* SelectQuestionGroupViewController.swift in Sources */,
+				9FB021472693896A00F5E71C /* CreateQuestionGroupViewController.swift in Sources */,
 				9FBD908E2692DC8D009A7E53 /* BaseQuestionStrategy.swift in Sources */,
 				9FB9068A268CEA030040FEC4 /* AppSettingsViewController.swift in Sources */,
+				9FB0214E26938ABF00F5E71C /* CreateQuestionGroupTitleCell.swift in Sources */,
 				9F08B63B268B37C0008F20B1 /* SceneDelegate.swift in Sources */,
 				9FB90691268F3A8C0040FEC4 /* QuestionGroupCaretaker.swift in Sources */,
+				9FB0214F26938ABF00F5E71C /* JapaneseTextField.swift in Sources */,
 				9F539596268C9673007166BE /* SequentialQuestionStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

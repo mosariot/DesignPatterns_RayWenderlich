@@ -27,7 +27,7 @@ public class QuestionViewController: UIViewController {
     
     private lazy var questionIndexItem: UIBarButtonItem = {
         let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        item.tintColor = .black
+        item.tintColor = .label
         navigationItem.rightBarButtonItem = item
         return item
     }()

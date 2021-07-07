@@ -29,6 +29,7 @@
 import UIKit
 import MapKit
 
+// factory product
 public class BusinessMapViewModel: NSObject {
   
   // MARK: - Properties

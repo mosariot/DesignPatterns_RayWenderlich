@@ -12,6 +12,7 @@
 		9F203BF42695DB35008ADFDD /* YLPClient+BusinessSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F203BF32695DB35008ADFDD /* YLPClient+BusinessSearchClient.swift */; };
 		9F203BF62695DB49008ADFDD /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F203BF52695DB49008ADFDD /* Business.swift */; };
 		9F203BF82695DB62008ADFDD /* BusinessSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F203BF72695DB62008ADFDD /* BusinessSearchClient.swift */; };
+		9FA705EF2696383D00EBE82B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705EE2696383D00EBE82B /* Filter.swift */; };
 		C35933852023BF5700D85500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35933842023BF5700D85500 /* AppDelegate.swift */; };
 		C35933872023BF5700D85500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35933862023BF5700D85500 /* ViewController.swift */; };
 		C359338A2023BF5700D85500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35933882023BF5700D85500 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		9F203BF32695DB35008ADFDD /* YLPClient+BusinessSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YLPClient+BusinessSearchClient.swift"; sourceTree = "<group>"; };
 		9F203BF52695DB49008ADFDD /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		9F203BF72695DB62008ADFDD /* BusinessSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchClient.swift; sourceTree = "<group>"; };
+		9FA705EE2696383D00EBE82B /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		C35933812023BF5700D85500 /* CoffeeQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35933842023BF5700D85500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35933862023BF5700D85500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				9F203BF52695DB49008ADFDD /* Business.swift */,
+				9FA705EE2696383D00EBE82B /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				4252EAAA2023E05900847430 /* APIKeys.swift in Sources */,
 				9F203BEF2695A06A008ADFDD /* AnnotationFactory.swift in Sources */,
 				C35933872023BF5700D85500 /* ViewController.swift in Sources */,
+				9FA705EF2696383D00EBE82B /* Filter.swift in Sources */,
 				C35933852023BF5700D85500 /* AppDelegate.swift in Sources */,
 				9F203BF82695DB62008ADFDD /* BusinessSearchClient.swift in Sources */,
 				9F203BF42695DB35008ADFDD /* YLPClient+BusinessSearchClient.swift in Sources */,

@@ -19,12 +19,10 @@
 		C359338C2023BF5700D85500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C359338B2023BF5700D85500 /* Assets.xcassets */; };
 		C359338F2023BF5700D85500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C359338D2023BF5700D85500 /* LaunchScreen.storyboard */; };
 		C35933972023D71C00D85500 /* BusinessMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35933962023D71C00D85500 /* BusinessMapViewModel.swift */; };
-		D0AB10B5EBAC0EB11FB8A0EF /* Pods_CoffeeQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E686E7886A490F1FFC8EA6A /* Pods_CoffeeQuest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29FB63EB2573FE4C0823DBFF /* Pods-CoffeeQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeQuest.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeQuest/Pods-CoffeeQuest.debug.xcconfig"; sourceTree = "<group>"; };
-		2E686E7886A490F1FFC8EA6A /* Pods_CoffeeQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeQuest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4252EAA92023E05900847430 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		42FCA6CD8A00397A2A0DBC7B /* Pods-CoffeeQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeQuest.release.xcconfig"; path = "Target Support Files/Pods-CoffeeQuest/Pods-CoffeeQuest.release.xcconfig"; sourceTree = "<group>"; };
 		9F203BEE2695A06A008ADFDD /* AnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationFactory.swift; sourceTree = "<group>"; };
@@ -47,21 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0AB10B5EBAC0EB11FB8A0EF /* Pods_CoffeeQuest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05933B03CFE44BAAB1E14790 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E686E7886A490F1FFC8EA6A /* Pods_CoffeeQuest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4252EAA42023DFE500847430 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +133,6 @@
 				C35933832023BF5700D85500 /* CoffeeQuest */,
 				C35933822023BF5700D85500 /* Products */,
 				DE13338F10C2E1C7EFAD64D4 /* Pods */,
-				05933B03CFE44BAAB1E14790 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";

@@ -15,6 +15,11 @@
 		42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3C20449C9A00584FAD /* Assets.xcassets */; };
 		42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */; };
 		9FA705F12696E54500EBE82B /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705F02696E54500EBE82B /* Copying.swift */; };
+		9FA705F5269724CA00EBE82B /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705F4269724CA00EBE82B /* AcceptInputState.swift */; };
+		9FA705F7269724D500EBE82B /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705F6269724D500EBE82B /* AnimateState.swift */; };
+		9FA705F9269724E100EBE82B /* ClearState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705F8269724E100EBE82B /* ClearState.swift */; };
+		9FA705FB2697250400EBE82B /* CopyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705FA2697250400EBE82B /* CopyState.swift */; };
+		9FA705FD2697251200EBE82B /* DrawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA705FC2697251200EBE82B /* DrawViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		42F35C3F20449C9A00584FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F35C4120449C9A00584FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA705F02696E54500EBE82B /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
+		9FA705F4269724CA00EBE82B /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
+		9FA705F6269724D500EBE82B /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
+		9FA705F8269724E100EBE82B /* ClearState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearState.swift; sourceTree = "<group>"; };
+		9FA705FA2697250400EBE82B /* CopyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyState.swift; sourceTree = "<group>"; };
+		9FA705FC2697251200EBE82B /* DrawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +116,8 @@
 		42F35C4920449CAA00584FAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				424387E320449D300056B653 /* DrawView.swift */,
+				9FA705F22697249500EBE82B /* DrawView */,
 				42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */,
-				424387E62044A1ED0056B653 /* LineShape.swift */,
 				42F35C3920449C9A00584FAD /* Main.storyboard */,
 			);
 			path = Views;
@@ -121,6 +130,28 @@
 				42F35C4120449C9A00584FAD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FA705F22697249500EBE82B /* DrawView */ = {
+			isa = PBXGroup;
+			children = (
+				424387E320449D300056B653 /* DrawView.swift */,
+				424387E62044A1ED0056B653 /* LineShape.swift */,
+				9FA705F3269724AC00EBE82B /* States */,
+			);
+			path = DrawView;
+			sourceTree = "<group>";
+		};
+		9FA705F3269724AC00EBE82B /* States */ = {
+			isa = PBXGroup;
+			children = (
+				9FA705F4269724CA00EBE82B /* AcceptInputState.swift */,
+				9FA705F6269724D500EBE82B /* AnimateState.swift */,
+				9FA705F8269724E100EBE82B /* ClearState.swift */,
+				9FA705FA2697250400EBE82B /* CopyState.swift */,
+				9FA705FC2697251200EBE82B /* DrawViewState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,10 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA705F7269724D500EBE82B /* AnimateState.swift in Sources */,
 				42F35C3820449C9A00584FAD /* ViewController.swift in Sources */,
+				9FA705FB2697250400EBE82B /* CopyState.swift in Sources */,
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
+				9FA705FD2697251200EBE82B /* DrawViewState.swift in Sources */,
 				9FA705F12696E54500EBE82B /* Copying.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
+				9FA705F9269724E100EBE82B /* ClearState.swift in Sources */,
+				9FA705F5269724CA00EBE82B /* AcceptInputState.swift in Sources */,
 				424387E420449D300056B653 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

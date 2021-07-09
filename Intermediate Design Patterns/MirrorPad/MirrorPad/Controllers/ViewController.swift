@@ -31,11 +31,13 @@ import UIKit
 public class ViewController: UIViewController {
   
   // MARK: - Outlets
+  
   @IBOutlet public var drawViewContainer: UIView!
   @IBOutlet public var inputDrawView: DrawView!
   @IBOutlet public var mirrorDrawViews: [DrawView]!
   
   // MARK: - Actions
+  
   @IBAction public func animatePressed(_ sender: Any) {
     mirrorDrawViews.forEach{ $0.copyLines(from: inputDrawView) }
     mirrorDrawViews.forEach{ $0.animate() }
@@ -49,5 +51,12 @@ public class ViewController: UIViewController {
   
   @IBAction public func sharePressed(_ sender: Any) {
     
+  }
+  
+  // MARK: - View Lifecycle
+  
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    mirrorDrawViews.forEach { inputDrawView.addDelegate($0) }
   }
 }

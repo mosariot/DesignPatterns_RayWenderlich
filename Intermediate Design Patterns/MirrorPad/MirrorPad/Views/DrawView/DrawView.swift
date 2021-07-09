@@ -28,6 +28,12 @@
 
 import UIKit
 
+@objc public protocol DrawViewDelegate: AnyObject {
+  
+  func drawView(_ source: DrawView, didAddLine line: LineShape)
+  func drawView(_ source: DrawView, didAddPoint point: CGPoint)
+}
+
 public class DrawView: UIView {
   
   // MARK: - Instance Properties
@@ -76,5 +82,30 @@ public class DrawView: UIView {
   
   public func copyLines(from source: DrawView) {
     currentState.copyLines(from: source)
+  }
+  
+  // MARK: - Delegate Management
+  
+  public let multiCastDelegate = MulticastDelegate<DrawViewDelegate>()
+  
+  public func addDelegate(_ delegate: DrawViewDelegate) {
+    multiCastDelegate.addDelegate(delegate)
+  }
+  
+  public func removeDelegate(_ delegate: DrawViewDelegate) {
+    multiCastDelegate.removeDelegate(delegate)
+  }
+}
+
+// MARK: - DrawViewDelegate
+
+extension DrawView: DrawViewDelegate {
+  
+  public func drawView(_ source: DrawView, didAddLine line: LineShape) {
+    currentState.drawView(source, didAddLine: line)
+  }
+  
+  public func drawView(_ source: DrawView, didAddPoint point: CGPoint) {
+    currentState.drawView(source, didAddPoint: point)
   }
 }

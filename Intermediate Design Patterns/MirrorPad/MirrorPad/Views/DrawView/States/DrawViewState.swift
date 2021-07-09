@@ -32,7 +32,7 @@ public class DrawViewState {
   
   // MARK: - Class Properties
   
-  public class var identifier: AnyHashable {
+  public static var identifier: AnyHashable {
     ObjectIdentifier(self)
   }
   
@@ -61,4 +61,19 @@ public class DrawViewState {
     drawView.currentState = state
     return state
   }
+}
+
+// MARK: - DrawViewDelegate
+
+extension DrawViewState: DrawViewDelegate {
+  
+  public func drawView(_ source: DrawView, didAddLine line: LineShape) {
+    
+  }
+  
+  public func drawView(_ source: DrawView, didAddPoint point: CGPoint) {
+    
+  }
+  
+  
 }

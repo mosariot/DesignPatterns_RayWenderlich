@@ -28,6 +28,7 @@
 
 import Foundation
 
+// flyweght class
 public final class Fonts {
   
   public static let large = loadFont(name: fontName, size: 30.0)

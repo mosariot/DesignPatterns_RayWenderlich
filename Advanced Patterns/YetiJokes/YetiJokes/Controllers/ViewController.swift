@@ -53,12 +53,16 @@ public class ViewController: UIViewController {
   @IBAction public func segmentedControlValueChanged(_ sender: UISegmentedControl) {
     switch sender.selectedSegmentIndex {
     case 0:
+      // flyweght using
       textLabel.font = Fonts.small
     case 1:
+      // flyweght using
       textLabel.font = Fonts.medium
     case 2:
+      // flyweght using
       textLabel.font = Fonts.large
     default:
+      // flyweght using
       textLabel.font = Fonts.small
     }
   }

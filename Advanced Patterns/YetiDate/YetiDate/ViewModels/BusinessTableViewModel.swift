@@ -25,3 +25,32 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+
+import MapKit
+import YelpAPI
+
+public class BusinessTableViewModel {
+
+  public let business: YLPBusiness
+  public let primaryCategory: YelpCategory
+  public var address: String {
+    let location = business.location
+    var address = location.address.joined(separator: "\n")
+    address.append("\n\(location.city), \(location.stateCode) \(location.postalCode)")
+    return address
+  }
+
+  public init(business: YLPBusiness, primaryCategory: YelpCategory) {
+    self.business = business
+    self.primaryCategory = primaryCategory
+  }
+}
+
+// MARK: - View Conveniences
+extension BusinessTableViewModel {
+  public func configure(_ cell: BusinessTableViewCell) {
+    cell.customImageView.image = primaryCategory.largeIcon
+    cell.titleLabel.text = business.name
+    cell.addressLabel.text = address
+  }
+}

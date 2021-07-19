@@ -13,6 +13,8 @@
  
  ## Code Example
  */
+// MARK: - Common MulticastDelegate
+
 public class MulticastDelegate<ProtocolType> {
     
     // MARK: - DelegateWrapper

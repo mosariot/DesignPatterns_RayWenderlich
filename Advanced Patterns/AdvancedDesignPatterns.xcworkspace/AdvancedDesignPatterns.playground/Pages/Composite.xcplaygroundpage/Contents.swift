@@ -15,14 +15,16 @@
  */
 import Foundation
 
-// component protocol
+// MARK: - Component Protocol
+
 protocol File {
     
     var name: String { get set }
     func open()
 }
 
-// leaf objects
+// MARK: - Leaf Objects
+
 final class eBook: File {
     
     var name: String
@@ -75,7 +77,8 @@ final class Folder: File {
     }
 }
 
-// example
+// MARK: - Example
+
 let psychoKiller = Music(name: "Psycho Killer", artist: "The Talking Heads")
 let rebelRebel = Music(name: "Rebel Rebel", artist: "David Bowie")
 let blisterInTheSun = Music(name: "Blister in the Sun", artist: "Violent Femmes")

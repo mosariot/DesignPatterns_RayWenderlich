@@ -21,7 +21,8 @@ let color = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
 let color2 = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
 print(color === color2)
 
-// flyweight extension
+// MARK: - Flyweight Extension
+
 extension UIColor {
     
     public static var colorStore: [String: UIColor] = [:]
@@ -37,7 +38,8 @@ extension UIColor {
     }
 }
 
-// flyweght using
+// MARK: - Example
+
 let flyColor = UIColor.rgba(1, 0, 0, 1)
 let flyColor2 = UIColor.rgba(1, 0, 0, 1)
 print(flyColor === flyColor2)

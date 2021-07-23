@@ -1,15 +1,15 @@
-/// Copyright (c) 2019 Razeware LLC
-///
+/// Copyright (c) 2021 Razeware LLC
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-///
+/// 
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,19 +28,36 @@
 
 import UIKit
 
-@UIApplicationMain
-public class AppDelegate: UIResponder, UIApplicationDelegate {
+// concrete coordinator
+public class HomeCoordinator: Coordinator {
   
   // MARK: - Instance Properties
-  public lazy var coordinator = HomeCoordinator(router: router)
-  public lazy var router = AppDelegateRouter(window: window!)
-  public lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
   
-  // MARK: - Application Lifecycle
-  public func application(_ application: UIApplication,
-                          didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // start of app flow
-    coordinator.present(animated: true, onDismissed: nil)
-    return true
+  public var children: [Coordinator] = []
+  public var router: Router
+  
+  // MARK: - Object Lifecycle
+  
+  public init(router: Router) {
+    self.router = router
+  }
+  
+  // MARK: - Instance Methods
+  
+  public func present(animated: Bool, onDismissed: (() -> Void)?) {
+    let viewController = HomeViewController.instantiate(delegate: self)
+    router.present(viewController, animated: true, onDismissed: onDismissed)
+  }
+}
+
+// MARK: - HomeViewControllerDelegate
+
+extension HomeCoordinator: HomeViewControllerDelegate {
+  
+  public func homeViewControllerDidPressScheduleAppointment(_ viewController: HomeViewController) {
+    let router = ModalNavigationRouter(parentViewController: viewController)
+    let coordinator = PetAppointmentBuilderCoordinator(router: router)
+    // transition to next app flow
+    presentChild(coordinator, animated: true)
   }
 }

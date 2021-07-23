@@ -26,6 +26,7 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+// coordinator protocol
 public protocol Coordinator: AnyObject {
 
   var children: [Coordinator] { get set }

@@ -28,6 +28,7 @@
 
 import UIKit
 
+// MARK: - Concrete ViewController
 // MARK: - StartOverViewControllerDelegate
 public protocol StartOverViewControllerDelegate: AnyObject {
   func startOverViewControllerDidPressStartOver(_ controller: StartOverViewController)

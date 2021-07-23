@@ -28,6 +28,7 @@
 
 import UIKit
 
+// MARK: - Concrete ViewController
 // MARK: - StepViewControllerDelegate
 public protocol StepViewControllerDelegate: AnyObject {
   func stepViewControllerDidPressNext(_ controller: StepViewController)
